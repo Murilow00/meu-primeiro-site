@@ -1,14 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+
 /*Reset do CSS */
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-h1,p{
-    text-align: center;
-    color: aliceblue ;
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family:"Comic Neue";
 }
+
+
 header{
     background-color: rgb(172, 6, 39);
     padding: 40px;
+    text-align: center;
+}
+
+main{
+    background-color: rgba(177, 175, 175, 0.74);
+    flex: 1;
+    padding: 48px 38px;
+    width: 100%;
+}
+
+about-section{
+    display: block;
+    background-color: aliceblue;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+#titulo-sobre-mim{
+    font-size: 49px;
+    border-bottom: 2px solid blueviolet;
+}
+
+.texto-sobre-mim{
+    font-size: 30px;
+    color: black;
 }
