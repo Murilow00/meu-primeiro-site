@@ -21,6 +21,7 @@ header{
     background-color: rgb(172, 6, 39);
     padding: 40px;
     text-align: center;
+    font-size: 37px ;
 }
 
 main{
@@ -67,4 +68,45 @@ li:hover{
     background-color: rgb(108, 69, 126);
     transform: translateX(5px);
     transition: all 0.3s ease;
+}
+
+contact{
+    display: block;
+    background-color: aliceblue;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    margin-top: 38px;
+}
+
+contact h2 {
+    margin-top: 30px;
+    font-size: 40px;
+    text-align: center;
+} 
+
+contact p {
+  text-align: center;
+  font-size: 22px;
+}
+
+contact a {
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: 2px solid blueviolet;
+    border-radius: 25px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+contact a:hover{
+    background-color: rgb(53, 5, 99);
+    color: white;
+    transform: translateY(-2px);
+
 }
