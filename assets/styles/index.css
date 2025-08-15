@@ -46,6 +46,9 @@ ul{
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Adicionado para que os itens quebrem a linha */
+    justify-content: center;
+    gap: 15px; /* Adicionado para espaçamento entre os itens */
 }
 
 li{
@@ -89,8 +92,8 @@ contact h2 {
 } 
 
 contact p {
-  text-align: center;
-  font-size: 22px;
+    text-align: center;
+    font-size: 22px;
 }
 
 contact a {
@@ -121,4 +124,83 @@ footer {
 }
 footer p{
     font-size: 2rem;
+}
+
+/* --- Media Queries --- */
+
+/* Telas menores que 1024px (por exemplo, tablets) */
+@media (max-width: 1024px) {
+    about-section, hobbies, contact {
+        width: 95%; /* Aumenta a largura para ocupar mais espaço na tela */
+        padding: 20px; /* Diminui o padding interno */
+    }
+
+    li {
+        min-width: 200px; /* Diminui a largura mínima dos itens da lista de hobbies */
+        flex-grow: 1; /* Permite que os itens cresçam para ocupar o espaço disponível */
+    }
+
+    contact a {
+        display: block; /* Transforma os links de contato em blocos para ficarem um abaixo do outro */
+        margin: 10px 0; /* Adiciona margem entre os links */
+    }
+}
+
+/* Telas menores que 768px (por exemplo, celulares) */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        font-size: 24px;
+    }
+    
+    header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    about-section, hobbies, contact {
+        width: 100%; /* Ocupa a largura total para telas pequenas */
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    #titulo-sobre-mim, #titulo-hobbies {
+        font-size: 30px;
+    }
+    
+    .texto-sobre-mim, .texto-hobbies {
+        font-size: 20px;
+    }
+
+    li {
+        min-width: 100%; /* Faz com que cada item ocupe a largura total da tela */
+        border-left: none; /* Remove a borda para um visual mais limpo em celulares */
+        border-bottom: 4px solid black; /* Adiciona uma borda na parte de baixo para separar os itens */
+        padding: 10px;
+    }
+
+    ul {
+        flex-direction: column; /* Organiza os itens de hobby em uma coluna */
+    }
+
+    contact h2 {
+        font-size: 30px;
+    }
+
+    contact p {
+        font-size: 18px;
+    }
+
+    contact a {
+        display: block; /* Garante que os links de contato continuem em bloco */
+        margin: 8px 0;
+        padding: 12px;
+    }
+
+    footer p {
+        font-size: 1.2rem;
+    }
 }
